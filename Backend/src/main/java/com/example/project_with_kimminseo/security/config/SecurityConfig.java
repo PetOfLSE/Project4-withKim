@@ -23,7 +23,6 @@ public class SecurityConfig {
         http
                 .authorizeRequests(auth -> {
                     auth.requestMatchers("/","/swagger-ui/**").permitAll()
-                            .requestMatchers("/h2-console/**").permitAll()
                             .anyRequest().authenticated();
                 });
 
