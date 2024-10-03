@@ -146,4 +146,7 @@ gradle-app.setting
 application.properties
 .DS_Store
 
+# Ignore Docker Compose file
+docker-compose.yaml
+
 # End of https://www.toptal.com/developers/gitignore/api/java,intellij+all,gradle

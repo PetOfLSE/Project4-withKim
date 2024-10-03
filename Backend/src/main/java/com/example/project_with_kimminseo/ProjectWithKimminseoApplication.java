@@ -9,5 +9,4 @@ public class ProjectWithKimminseoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ProjectWithKimminseoApplication.class, args);
 	}
-
 }
