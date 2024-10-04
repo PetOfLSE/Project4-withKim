@@ -1,5 +1,6 @@
 package com.example.project_with_kimminseo.user.model.entity;
 
+import com.example.project_with_kimminseo.common.enums.Gender;
 import com.example.project_with_kimminseo.common.enums.Role;
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
@@ -14,8 +15,9 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "users")
+@Table(name = "user")
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
+@ToString
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,7 +35,9 @@ public class UserEntity {
     @Column(unique = true, nullable = false)
     private String phoneNumber;
 
-    private String gender;
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private Gender gender;
 
     @Enumerated(EnumType.STRING)
     private Role role;
